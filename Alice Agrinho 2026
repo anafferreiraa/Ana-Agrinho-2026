@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Forte, Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-seedling"></i> Agro<span>Sustentável</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>O equilíbrio perfeito entre a alta produtividade e a preservação do meio ambiente.</p>
+            <a href="#pilares" class="btn-principal">Conheça Mais</a>
+        </div>
+    </section>
+
+    <section id="pilares" class="section-container">
+        <h2 class="section-title">Os Motores do Nosso Campo</h2>
+        <p class="section-subtitle">Como duas forças distintas se unem para alimentar o mundo e fortalecer a economia.</p>
+        
+        <div class="grid-cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1592982537447-7440771109d3?auto=format&fit=crop&q=80&w=600" alt="Tecnologia no Agronegócio">
+                <div class="card-body">
+                    <h3><i class="fa-solid fa-tractor"></i> Grande Agronegócio</h3>
+                    <p>Responsável pela alta escala de produção, exportação e aplicação de tecnologias de ponta. Impulsiona o PIB e garante a segurança alimentar global através da eficiência e inovação tecnológica nas lavouras.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=600" alt="Agricultura Familiar">
+                <div class="card-body">
+                    <h3><i class="fa-solid fa-hands-holding-circle"></i> Agricultura Familiar</h3>
+                    <p>A base da alimentação que chega à mesa dos brasileiros. Focada na diversidade de cultivos, desenvolvimento regional e na preservação de tradições, representando a essência do cuidado com a terra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sustentabilidade" class="sustentabilidade-section">
+        <div class="sustentabilidade-container">
+            <div class="sustentabilidade-texto">
+                <h2>O Equilíbrio é o Caminho</h2>
+                <p>A produção moderna não caminha separada da preservação ambiental. Hoje, o agro forte adota práticas que garantem o futuro do planeta:</p>
+                
+                <ul class="lista-sustentavel">
+                    <li><i class="fa-solid fa-check-circle"></i> <strong>Plantio Direto:</strong> Protege o solo contra erosões e mantém nutrientes.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> <strong>ILPF:</strong> Integração Lavoura-Pecuária-Floresta otimiza o uso da terra.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> <strong>Tecnologia de Precisão:</strong> Reduz o desperdício de água e insumos.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> <strong>Bioinsumos:</strong> Uso de defensores naturais para uma produção mais limpa.</li>
+                </ul>
+            </div>
+            <div class="sustentabilidade-imagem">
+                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=600" alt="Campo Verde Sustentável">
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-container contato-section">
+        <h2 class="section-title">Faça Parte Desse Futuro</h2>
+        <p class="section-subtitle">Envie suas dúvidas ou sugestões sobre o desenvolvimento sustentável no campo.</p>
+        
+        <form id="form-contato" class="form-style">
+            <div class="form-group">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Seu E-mail" required>
+            </div>
+            <div class="form-group">
+                <textarea id="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-principal">Enviar Mensagem</button>
+        </form>
+        <div id="form-feedback" class="feedback-mensagem"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agro Sustentável. Todos os direitos reservados. Equilíbrio que alimenta o mundo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  
