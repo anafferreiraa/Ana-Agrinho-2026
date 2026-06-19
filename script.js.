@@ -1,0 +1,63 @@
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. Menu Mobile (Hamburguer)
+    const menuToggle = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+        
+        // Altera o ícone entre barras e 'X' ao abrir/fechar
+        const icone = menuToggle.querySelector("i");
+        if(navLinks.classList.contains("active")) {
+            icone.classList.remove("fa-bars");
+            icone.classList.add("fa-xmark");
+        } else {
+            icone.classList.remove("fa-xmark");
+            icone.classList.add("fa-bars");
+        }
+    });
+
+    // Fecha o menu mobile automaticamente ao clicar em um link
+    const links = document.querySelectorAll(".nav-links a");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            if(navLinks.classList.contains("active")) {
+                navLinks.classList.remove("active");
+                menuToggle.querySelector("i").classList.add("fa-bars");
+                menuToggle.querySelector("i").classList.remove("fa-xmark");
+            }
+        });
+    });
+
+    // 2. Interação e Validação do Formulário de Contato
+    const form = document.getElementById("form-contato");
+    const feedback = document.getElementById("form-feedback");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Impede a página de recarregar
+
+        // Pega os valores inseridos
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+
+        // Validação simples
+        if (nome.trim() === "" || email.trim() === "") {
+            feedback.style.color = "red";
+            feedback.textContent = "Por favor, preencha todos os campos.";
+            return;
+        }
+
+        // Simulação de envio bem-sucedido
+        feedback.style.color = "#4caf50";
+        feedback.textContent = `Obrigado pelo contato, ${nome}! Sua mensagem sobre sustentabilidade no agro foi enviada com sucesso.`;
+
+        // Limpa os campos do formulário
+        form.reset();
+
+        // Limpa a mensagem de sucesso após 5 segundos
+        setTimeout(() => {
+            feedback.textContent = "";
+        }, 5000);
+    });
+});
